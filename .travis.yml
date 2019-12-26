@@ -17,11 +17,11 @@ after_success:
   - docker build -t wilfredmulenga/multi-worker ./worker
   - docker build -t wilfredmulenga/multi-server ./server
 # log into the docker cli
-- echo "$DOCKER_PASSWORD" | docker login  -u "$DOCKER_ID" -- password-stdin
+  - echo "$DOCKER_PASSWORD" | docker login  -u "$DOCKER_ID" -- password-stdin
 # take those images and push them onto docker hub
-- docker push wilfredmulenga/multi-client
-- docker push wilfredmulenga/multi-nginx
-- docker push wilfredmulenga/multi-worker
-- docker push wilfredmulenga/multi-server
+  - docker push wilfredmulenga/multi-client
+  - docker push wilfredmulenga/multi-nginx
+  - docker push wilfredmulenga/multi-worker
+  - docker push wilfredmulenga/multi-server
 
 
