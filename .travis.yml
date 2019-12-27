@@ -13,7 +13,7 @@ script:
 
 after_success:
   - docker build -t wilfredmulenga/multi-client ./client
-  - docker build -t wilfredmulenga/multi-nginx ./ngignx
+  - docker build -t wilfredmulenga/multi-nginx ./nginx
   - docker build -t wilfredmulenga/multi-worker ./worker
   - docker build -t wilfredmulenga/multi-server ./server
 # log into the docker cli
