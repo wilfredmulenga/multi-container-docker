@@ -57,6 +57,7 @@ class Fib extends Component {
   }
 
   render () {
+    const { seenIndexes } = this.state
     return (
       <div>
         <form onSubmit={ this.handleSubmit } >
@@ -69,7 +70,7 @@ class Fib extends Component {
           <button>Submit</button>
 
           <h3>Indexes I have seen</h3>
-            {this.renderSeenIndexes()}
+            { seenIndexes.length > 1 ? this.renderSeenIndexes() : null }
           <h3>Calculated Values:</h3>
           {this.renderValues()}
         </form>
